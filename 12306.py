@@ -14,7 +14,7 @@ driver.implicitly_wait(10)
 driver.get('https://kyfw.12306.cn/otn')
 time.sleep(5)
 
-driver.find_element_by_id("login_user").click()
+driver.find_element_by_id("username").click()
 driver.find_element_by_id("username").send_keys("522268397@qq.com")
 driver.find_element_by_id("password").send_keys("lyt520")
 print("continue")
