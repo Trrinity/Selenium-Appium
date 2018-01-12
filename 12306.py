@@ -42,27 +42,28 @@ time.sleep(5)
 driver.find_element_by_css_selector("#_ul_station_train_code > li:nth-child(1) > label").click()
 time.sleep(5)
 
-#查询
-
-driver.find_element_by_id("query_ticket").click()
-e=driver.find_element_by_id("SWZ_6i00000G8009")
-time.sleep(5)
-e.click()
-
-print(e.text)
-
 while True:
     try:
         driver.find_element_by_id("query_ticket").click()
-        e=driver.find_element_by_id("SWZ_6i00000G8009")
+        e=driver.find_element_by_id("SWZ_6i00000G720F")
         e.click()
         if e.text in [u'无','--']:
             print ("nono")
             time.sleep(1)
         else:
             print("yes")
+            # 购票
+            driver.find_element_by_link_text("预订").click()
+            # 乘车人选择
+            driver.find_element_by_css_selector("#normal_passenger_id > li:nth-child(1) > label").click()
+            # 学生票确认（不是学生可去掉）
+            driver.find_element_by_link_text("确认").click()
+            # 提交订单
+            driver.find_element_by_link_text("提交订单").click()
+            driver.find_element_by_link_text("确认").click()
     except:
         pass
+
 
 
 
