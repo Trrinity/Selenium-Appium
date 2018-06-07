@@ -35,11 +35,11 @@ def count(n):
     driver.implicitly_wait(10)
 
     #打开网址
-    driver.get('http://cmdb.sec.yooli.com/')
+    driver.get('http://cmdb.sec.xx.com/')
     time.sleep(2)
 
     driver.find_element_by_xpath("/html/body/div/div[2]/div/form/div[1]/input").send_keys("LIYANTING")
-    driver.find_element_by_xpath("/html/body/div/div[2]/div/form/div[2]/input").send_keys("miemie111")
+    driver.find_element_by_xpath("/html/body/div/div[2]/div/form/div[2]/input").send_keys("xx")
     driver.find_element_by_xpath("/html/body/div/div[2]/div/form/div[2]/input").send_keys(Keys.ENTER)
     driver.find_element_by_xpath("/html/body/div/aside[1]/div/nav/ul/li[2]/a").send_keys(Keys.ENTER)
     driver.find_element_by_link_text(u'新增资产').click
