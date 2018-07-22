@@ -16,7 +16,7 @@ time.sleep(5)
 
 driver.find_element_by_id("username").click()
 driver.find_element_by_id("username").send_keys("522268397@qq.com")
-driver.find_element_by_id("password").send_keys("lyt520")
+driver.find_element_by_id("password").send_keys("xxx")
 print("continue")
 time.sleep(15)
 
