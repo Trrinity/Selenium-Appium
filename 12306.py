@@ -12,13 +12,15 @@ driver.implicitly_wait(10)
 
 #打开网址
 driver.get('https://kyfw.12306.cn/otn')
-time.sleep(5)
+time.sleep(3)
 
-driver.find_element_by_id("username").click()
-driver.find_element_by_id("username").send_keys("522268397@qq.com")
-driver.find_element_by_id("password").send_keys("xxx")
+driver.find_element_by_link_text("账号登录").click()
+time.sleep(5)
+driver.find_element_by_id("J-userName").click()
+driver.find_element_by_id("J-userName").send_keys("522268397@qq.com")
+driver.find_element_by_id("J-password").send_keys("xxx")
 print("continue")
-time.sleep(15)
+time.sleep(10)
 
 driver.find_element_by_link_text("车票预订").click()
 time.sleep(5)
